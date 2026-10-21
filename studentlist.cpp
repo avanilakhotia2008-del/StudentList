@@ -17,7 +17,7 @@ struct student{
 };
 
 void add_student (vector<student*>  &students);
-// void print_student (vector<student*> &students);
+void print_student (vector<student*> &students);
 // void del_student (vector<student*> &students);
 
 
@@ -32,10 +32,10 @@ int main(){
     if (user == "ADD"){
       add_student(students);}
     
-    /* else if (user == "PRINT"){
+    else if (user == "PRINT"){
     print_student (students);}
     
-    else if (user == "DELETE"){
+    /*else if (user == "DELETE"){
       del_student (students);}
     
     else if (user == "QUIT"){
@@ -66,7 +66,10 @@ void add_student (vector<student*> &students){
   students.push_back(new_stu);
   
 
+}
+
+void print_student (vector<student*> &students){
+  cout << &students << endl;
 
 
 }
-
