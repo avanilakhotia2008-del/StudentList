@@ -17,8 +17,8 @@ struct student{
 };
 
 void add_student (vector<student*>  &students);
-void print_student (vector<student*> &students);
-void del_student (vector<student*> &students);
+// void print_student (vector<student*> &students);
+// void del_student (vector<student*> &students);
 
 
 int main(){
@@ -32,8 +32,8 @@ int main(){
     if (user == "ADD"){
       add_student(students);}
     
-    else if (user == "PRINT"){
-      print_student (students);}
+    /* else if (user == "PRINT"){
+    print_student (students);}
     
     else if (user == "DELETE"){
       del_student (students);}
@@ -42,7 +42,7 @@ int main(){
       break;}
     
     else {
-      cout << "enter a valid response" << endl;}
+    cout << "enter a valid response" << endl;} */
 
   }
     
@@ -50,5 +50,23 @@ int main(){
   
 }
 
+void add_student (vector<student*> &students){
+  student* new_stu = new student();
+  
+  cout << "Enter your first name: " << endl;
+  cin >> new_stu->first_name; //do arrow first name 
+  cout << "Enter your last name: " << endl;
+  cin >> new_stu->last_name;
+  cout << "Enter your student id: " << endl;
+  cin >> new_stu->student_id;
+  cout << "Enter your GPA: " << endl;
+  cin >> new_stu->gpa;
+  // cout << stu1.first_name << " " << stu1.last_name << " " << stu1.student_id << "\n";
 
+  students.push_back(new_stu);
+  
+
+
+
+}
 
