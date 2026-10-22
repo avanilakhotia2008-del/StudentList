@@ -7,6 +7,8 @@ This program is made using mainly sturctures and pointers.
 #include <iostream>
 #include <vector>
 #include <string>
+#include <iomanip>
+
 using namespace std;
 
 struct student{
@@ -54,7 +56,7 @@ void add_student (vector<student*> &students){
   student* new_stu = new student();
   
   cout << "Enter your first name: " << endl;
-  cin >> new_stu->first_name; //do arrow first name 
+  cin >> new_stu->first_name;  
   cout << "Enter your last name: " << endl;
   cin >> new_stu->last_name;
   cout << "Enter your student id: " << endl;
@@ -69,7 +71,12 @@ void add_student (vector<student*> &students){
 }
 
 void print_student (vector<student*> &students){
-  cout << &students << endl;
+  for (int i = 0; i < students.size(); i++){
+    cout << students[i] -> first_name<< " "
+	 << students[i] -> last_name << ","
+	 << students[i] -> student_id << ","
+	 << fixed << setprecision(2) << students[i] -> gpa
+	 << endl;}
 
 
 }
